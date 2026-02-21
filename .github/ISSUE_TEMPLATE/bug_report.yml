@@ -1,0 +1,89 @@
+name: Bug report
+description: Report a defect found during testing
+title: "[BUG] "
+labels: ["type:bug", "status:needs-triage"]
+body:
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, viewport
+      placeholder: "Chrome 121 / Windows 11 / 1920x1080"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - critical
+        - high
+        - medium
+        - low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0
+        - P1
+        - P2
+        - P3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / Module
+      options:
+        - login
+        - inventory
+        - cart
+        - checkout
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      placeholder: "User is logged out and on the login page."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: "1) ... 2) ... 3) ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Result
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Result
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Link to screenshots/videos under /evidence/bug-### or attach images here
+      placeholder: "evidence/bug-001/screenshot-1.png"
+    validations:
+      required: false
