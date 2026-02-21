@@ -1,1 +1,8 @@
 TC_ID,Title,Preconditions,Steps,Expected,Priority,Risk,Test_Type,Module
+TC-001,Login with valid credentials,User is on the Login page,"1) Enter a valid username 2) Enter the correct password 3) Click Login",Login succeeds and Inventory page is displayed,P0,R1,functional,login
+TC-002,Login with empty username,User is on the Login page,"1) Leave username empty 2) Enter any password 3) Click Login",Error message is displayed and user remains on Login page,P0,R1,negative,login
+TC-003,Login with empty password,User is on the Login page,"1) Enter any username 2) Leave password empty 3) Click Login",Error message is displayed and user remains on Login page,P0,R1,negative,login
+TC-004,Login with empty username and password,User is on the Login page,"1) Leave username empty 2) Leave password empty 3) Click Login",Error message is displayed and user remains on Login page,P0,R1,negative,login
+TC-005,Login with invalid credentials,User is on the Login page,"1) Enter an invalid username 2) Enter an invalid password 3) Click Login",Error message is displayed and user remains on Login page,P0,R1,negative,login
+TC-006,Logout from the application,User is logged in on the Inventory page,"1) Open the menu 2) Click Logout",User is logged out and Login page is displayed,P1,R1,functional,login
+TC-007,Access Inventory URL while logged out,User is logged out,"1) Open the Inventory page URL directly",User is redirected to Login page (or access is blocked),P1,R1,negative,login
