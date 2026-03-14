@@ -1,94 +1,49 @@
-TC_ID;Title;Preconditions;Steps;Expected;Priority;Risk;Test_Type;Module
-TC-001;Login with valid credentials;User is on the Login page;"1. Enter a valid username
+TC_ID,Title,Preconditions,Steps,Expected,Priority,Risk,Test_Type,Module
+TC-001,Login with valid credentials,User is on the Login page,"1. Enter a valid username
 2. Enter a valid password
-3. Click the Login button";User is redirected to the Inventory page;P0;R1;functional;login
-TC-002;Login with empty username;User is on the Login page;"1. Leave the username field empty
+3. Click the Login button",User is redirected to the Inventory page,P0,R1,functional,login
+TC-002,Login with empty username,User is on the Login page,"1. Leave the username field empty
 2. Enter a valid password
-3. Click the Login button";An error message is displayed and the user remains on the Login page;P0;R1;negative;login
-TC-003;Login with empty password;User is on the Login page;"1. Enter a valid username
+3. Click the Login button",An error message is displayed and the user remains on the Login page,P0,R1,negative,login
+TC-003,Login with empty password,User is on the Login page,"1. Enter a valid username
 2. Leave the password field empty
-3. Click the Login button";An error message is displayed and the user remains on the Login page;P0;R1;negative;login
-TC-004;Login with empty username and password;User is on the Login page;"1. Leave the username field empty
+3. Click the Login button",An error message is displayed and the user remains on the Login page,P0,R1,negative,login
+TC-004,Login with empty username and password,User is on the Login page,"1. Leave the username field empty
 2. Leave the password field empty
-3. Click the Login button";An error message is displayed and the user remains on the Login page;P0;R1;negative;login
-TC-005;Login with invalid credentials;User is on the Login page;"1. Enter an invalid username
+3. Click the Login button",An error message is displayed and the user remains on the Login page,P0,R1,negative,login
+TC-005,Login with invalid credentials,User is on the Login page,"1. Enter an invalid username
 2. Enter an invalid password
-3. Click the Login button";An error message is displayed and the user remains on the Login page;P0;R1;negative;login
-TC-006;Logout from the application;User is logged in and is on the Inventory page;"1. Open the side menu
-2. Click the Logout button";User is logged out and redirected to the Login page;P1;R1;functional;login
-TC-007;Access Inventory URL while logged out;User is logged out;1. Open the Inventory page URL directly;User is redirected to the Login page;P1;R1;negative;login
-TC-008;Inventory page displays product list for a logged-in user;User is logged in and is on the Inventory page;1. Verify that the product list is displayed on the Inventory page;The product list is displayed on the Inventory page;P1;R4;functional;inventory
-TC-009;Add product to cart from the Inventory page;User is logged in and is on the Inventory page;1. Click the Add to cart button for a product;"The product is added to the cart and the cart badge displays ""1""";P1;R2;functional;inventory
-TC-010;Remove product from cart from the Inventory page;"User is logged in and is on the Inventory page; a product has already been added to the cart";1. Click the Remove button for the added product;The product is removed from the cart and the cart badge is no longer displayed;P1;R2;functional;inventory
-TC-011;Open cart page from the cart icon;"User is logged in and is on the Inventory page; a product has already been added to the cart";1. Click the cart icon;User is redirected to the Cart page;P0;R2;functional;cart
-TC-012;Added product is displayed on the Cart page;"User is logged in and is on the Cart page; a product has already been added to the cart";1. Verify that the added product is displayed on the Cart page;The added product is displayed on the Cart page;P0;R2;functional;cart
-TC-013;Start checkout with product in cart;"User is logged in and is on the cart page; a product has already been added to the cart";1. Click the Checkout button;User is redirected to the Checkout: Your Information page;P0;R3;functional;checkout
-TC-014;Checkout with valid customer information;"User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart";"1. Enter a valid first name
+3. Click the Login button",An error message is displayed and the user remains on the Login page,P0,R1,negative,login
+TC-006,Logout from the application,User is logged in and is on the Inventory page,"1. Open the side menu
+2. Click the Logout button",User is logged out and redirected to the Login page,P1,R1,functional,login
+TC-007,Access Inventory URL while logged out,User is logged out,1. Open the Inventory page URL directly,User is redirected to the Login page,P1,R1,negative,login
+TC-008,Inventory page displays product list for a logged-in user,User is logged in and is on the Inventory page,1. Verify that the product list is displayed on the Inventory page,The product list is displayed on the Inventory page,P1,R4,functional,inventory
+TC-009,Add product to cart from the Inventory page,User is logged in and is on the Inventory page,1. Click the Add to cart button for a product,"The product is added to the cart and the cart badge displays ""1""",P1,R2,functional,inventory
+TC-010,Remove product from cart from the Inventory page,User is logged in and is on the Inventory page; a product has already been added to the cart,1. Click the Remove button for the added product,The product is removed from the cart and the cart badge is no longer displayed,P1,R2,functional,inventory
+TC-011,Open cart page from the cart icon,User is logged in and is on the Inventory page; a product has already been added to the cart,1. Click the cart icon,User is redirected to the Cart page,P0,R2,functional,cart
+TC-012,Added product is displayed on the Cart page,User is logged in and is on the Cart page; a product has already been added to the cart,1. Verify that the added product is displayed on the Cart page,The added product is displayed on the Cart page,P0,R2,functional,cart
+TC-013,Start checkout with product in cart,User is logged in and is on the cart page; a product has already been added to the cart,1. Click the Checkout button,User is redirected to the Checkout: Your Information page,P0,R3,functional,checkout
+TC-014,Checkout with valid customer information,User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart,"1. Enter a valid first name
 2. Enter a valid last name
 3. Enter a valid postal code
-4. Click the Continue button";User is redirected to the Checkout: Overview page;P0;R3;functional;checkout
-TC-015;Checkout with empty first name;"User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart";"1. Leave the first name field empty
+4. Click the Continue button",User is redirected to the Checkout: Overview page,P0,R3,functional,checkout
+TC-015,Checkout with empty first name,User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart,"1. Leave the first name field empty
 2. Enter a valid last name
 3. Enter a valid postal code
-4. Click the Continue button";"An error message ""Error: First Name is required"" is displayed and the user remains on the Checkout: Your Information page";P0;R3;negative;checkout
-TC-016;Checkout overview page displays order summary;"User is logged in and is on the Checkout: Overview page; a product has already been added to the cart";1. Verify that the order summary is displayed on the Checkout: Overview page;The product details, payment information, shipping information, and total price are displayed on the Checkout: Overview page;P1;R3;functional;checkout
-TC-017;Complete checkout successfully;"User is logged in and is on the Checkout: Overview page; a product has already been added to the cart";1. Click the Finish button;"User is redirected to the Checkout: Complete! page and the message ""Thank you for your order!"" is displayed";P0;R3;functional;checkout
-TC-018;Checkout with empty last name;"User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart";"1. Enter a valid first name
+4. Click the Continue button","An error message ""Error: First Name is required"" is displayed and the user remains on the Checkout: Your Information page",P0,R3,negative,checkout
+TC-016,Checkout overview page displays order summary,User is logged in and is on the Checkout: Overview page; a product has already been added to the cart,1. Verify that the order summary is displayed on the Checkout: Overview page,"The product details, payment information, shipping information, and total price are displayed on the Checkout: Overview page",P1,R3,functional,checkout
+TC-017,Complete checkout successfully,User is logged in and is on the Checkout: Overview page; a product has already been added to the cart,1. Click the Finish button,"User is redirected to the Checkout: Complete! page and the message ""Thank you for your order!"" is displayed",P0,R3,functional,checkout
+TC-018,Checkout with empty last name,User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart,"1. Enter a valid first name
 2. Leave the last name field empty
 3. Enter a valid postal code
-4. Click the Continue button";"An error message ""Error: Last Name is required"" is displayed and the user remains on the Checkout: Your Information page";P0;R3;negative;checkout
-TC-019;Checkout with empty postal code;"User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart";"1. Enter a valid first name
+4. Click the Continue button","An error message ""Error: Last Name is required"" is displayed and the user remains on the Checkout: Your Information page",P0,R3,negative,checkout
+TC-019,Checkout with empty postal code,User is logged in and is on the Checkout: Your Information page; a product has already been added to the cart,"1. Enter a valid first name
 2. Enter a valid last name
 3. Leave the postal code field empty
-4. Click the Continue button";"An error message ""Error: Postal Code is required"" is displayed and the user remains on the Checkout: Your Information page";P0;R3;negative;checkout
-TC-020;Add two products to cart from the Inventory page;User is logged in and is on the Inventory page;"1. Click the Add to cart button for a product
-2. Click the Add to cart button for a second product";"Two products are added to the cart and the cart badge displays ""2""";P1;R2;functional;inventory
-TC-021;Two added products are displayed on the Cart page;"User is logged in and is on the Cart page; two products are already added to the cart";1. Verify that the added products are displayed on the Cart page;The added products are displayed on the Cart page;P0;R2;functional;cart
-TC-022;Sort products by name from Z to A;"User is logged in and is on the Inventory page; the default sort option ""Name (A to Z)"" is selected";"1. Select ""Name (Z to A)"" from the sort dropdown";The product list is sorted by name in descending order (Z to A) on the Inventory page;P1;R4;functional;inventory
-TC-023;Sort products by price (low to high);User is logged in and is on the Inventory page;"1. Select ""Price (low to high)"" from the sort dropdown";The product list is sorted by price in ascending order (low to high) on the Inventory page;P1;R4;functional;inventory
-TC-024;Sort products by price (high to low);User is logged in and is on the Inventory page;"1. Select ""Price (high to low)"" from the sort dropdown";The product list is sorted by price in descending order (high to low) on the Inventory page;P1;R4;functional;inventory
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
-;;;;;;;;
+4. Click the Continue button","An error message ""Error: Postal Code is required"" is displayed and the user remains on the Checkout: Your Information page",P0,R3,negative,checkout
+TC-020,Add two products to cart from the Inventory page,User is logged in and is on the Inventory page,"1. Click the Add to cart button for a product
+2. Click the Add to cart button for a second product","Two products are added to the cart and the cart badge displays ""2""",P1,R2,functional,inventory
+TC-021,Two added products are displayed on the Cart page,User is logged in and is on the Cart page; two products are already added to the cart,1. Verify that the added products are displayed on the Cart page,The added products are displayed on the Cart page,P0,R2,functional,cart
+TC-022,Sort products by name from Z to A,"User is logged in and is on the Inventory page; the default sort option ""Name (A to Z)"" is selected","1. Select ""Name (Z to A)"" from the sort dropdown",The product list is sorted by name in descending order (Z to A) on the Inventory page,P1,R4,functional,inventory
+TC-023,Sort products by price (low to high),User is logged in and is on the Inventory page,"1. Select ""Price (low to high)"" from the sort dropdown",The product list is sorted by price in ascending order (low to high) on the Inventory page,P1,R4,functional,inventory
+TC-024,Sort products by price (high to low),User is logged in and is on the Inventory page,"1. Select ""Price (high to low)"" from the sort dropdown",The product list is sorted by price in descending order (high to low) on the Inventory page,P1,R4,functional,inventory
