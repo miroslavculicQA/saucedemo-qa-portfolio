@@ -1,7 +1,7 @@
 name: Bug report
 description: Report a defect found during testing
 title: "[BUG] "
-labels: ["type:bug", "status:needs-triage"]
+labels: ["type:bug"]
 body:
   - type: input
     id: environment
@@ -56,12 +56,21 @@ body:
       placeholder: "User is logged out and on the login page."
     validations:
       required: true
+      
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: "Optional: use this field for affected products, affected options, or other relevant scope details."
+      placeholder: "Affected products\n- Product 1\n- Product 2"
+    validations:
+      required: false
 
   - type: textarea
     id: steps
     attributes:
       label: Steps to Reproduce
-      placeholder: "1. ... 2. ... 3. ..."
+      placeholder: "1. ...\n2. ...\n3. ..."
     validations:
       required: true
 
