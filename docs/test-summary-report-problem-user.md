@@ -66,7 +66,7 @@ This confirms that the application behavior varies significantly depending on th
 **Recommendation:** No-Go for the `problem_user` user context
 
 **Rationale:**  
-Although login is successful, multiple confirmed high-severity defects affect core post-login functionality, especially inventory interaction, cart behavior, and sorting. Based on this cycle, the application cannot be considered functionally stable for the `problem_user` context.
+Although login is successful, multiple confirmed critical and high-severity defects affect core post-login functionality, especially inventory interaction, cart behavior, and sorting. Based on this cycle, the application cannot be considered functionally stable for the `problem_user` context.
 
 ## 8. Final Notes
 This report is intentionally separated from the original MVP Manual Testing summary created for `standard_user`.
