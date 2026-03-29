@@ -9,7 +9,7 @@ This test cycle focused on defect-oriented exploratory testing of the SauceDemo 
 
 The purpose of this cycle was not to repeat the full MVP execution already covered with `standard_user`, but to explore whether an alternative supported user context reveals inconsistent or broken behavior in core user flows.
 
-The session primarily targeted inventory, cart, and checkout behavior after successful login. Multiple functional issues were identified and documented as GitHub Issues with supporting video evidence.
+The session primarily targeted inventory, cart, and checkout behavior after successful login. Multiple functional issues were identified and documented as GitHub Issues with supporting evidence.
 
 ## 2. Scope of This Cycle
 This exploratory cycle focused on:
@@ -24,7 +24,7 @@ This cycle was defect-focused and exploratory in nature. It was not intended to 
 - Test approach: exploratory testing / defect-focused validation
 - Test account: `problem_user`
 - Environment: Chrome 145 / Windows 11 / 2560x1440
-- Evidence type: video recordings stored under `evidence/bug-###/`
+- Evidence type: screenshots and videos stored under evidence/bug-###/
 
 Login itself was successful with `problem_user`, but multiple downstream defects were observed in inventory, cart, and checkout-related flows.
 
