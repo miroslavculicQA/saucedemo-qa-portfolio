@@ -21,7 +21,14 @@ https://www.saucedemo.com
 - Test Design Notes (EP/BVA/Decision Tables, etc.): `docs/test-design-techniques.md`
 - Test Cases: `testcases/test-cases.csv` (+ optional `testcases/test-cases.md`)
 - Bug Reports: GitHub Issues (with evidence under `evidence/`)
-- Test Summary Report: `docs/test-summary-report.md`
+- Test Summary Reports:
+  - `docs/test-summary-report.md` – MVP Manual Testing (`standard_user`)
+  - `docs/test-summary-report-problem-user.md` – Defect-Focused Exploratory Testing (`problem_user`)
+
+## Current Status
+- MVP manual test documentation and baseline execution were completed using `standard_user`.
+- A separate defect-focused exploratory cycle was later executed using `problem_user`.
+- Confirmed defects were documented as GitHub Issues with supporting evidence stored under `evidence/`.
 
 ## Repository Structure
 - `docs/` – testing documentation
