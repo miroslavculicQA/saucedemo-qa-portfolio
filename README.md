@@ -7,7 +7,7 @@ https://www.saucedemo.com
 
 ## Goals
 - Demonstrate ISTQB CTFL-aligned manual testing approach (test planning, test design, execution, defect reporting).
-- Keep artifacts structured and automation-friendly for a later Playwright + TypeScript implementation.
+- Keep artifacts structured and automation-friendly for a later Java + Selenium implementation.
 
 ## Scope (MVP)
 - Login / Logout
@@ -29,6 +29,12 @@ https://www.saucedemo.com
 - MVP manual test documentation and baseline execution were completed using `standard_user`.
 - A separate defect-focused exploratory cycle was later executed using `problem_user`.
 - Confirmed defects were documented as GitHub Issues with supporting evidence stored under `evidence/`.
+- The next planned phase is UI test automation using Java and Selenium based on the current manual baseline.
+
+## Planned Automation Stack
+- Language: Java
+- UI Automation: Selenium WebDriver
+- IDE: IntelliJ IDEA
 
 ## Repository Structure
 - `docs/` – testing documentation
